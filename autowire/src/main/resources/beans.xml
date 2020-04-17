@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="envelope" class="com.trainingbasket.beans.Envelope">
+        <property name="source" value="Me"/>
+        <property name="destination" value="Santa Claus"/>
+    </bean>
+
+    <bean id="envelopeDefault" class="com.trainingbasket.beans.Envelope" parent="envelope">
+        <property name="message">
+            <bean class="com.trainingbasket.beans.Message">
+                <property name="message" value="Default message" />
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="envelopeByName" class="com.trainingbasket.beans.Envelope" parent="envelope" autowire="byName">
+    </bean>
+
+    <bean id="envelopeByType" class="com.trainingbasket.beans.Envelope" parent="envelope" autowire="byType">
+    </bean>
+
+    <bean id="message" class="com.trainingbasket.beans.Message">
+        <property name="message" value="Autowired message"/>
+    </bean>
+</beans>
