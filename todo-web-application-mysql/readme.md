@@ -1,6 +1,6 @@
 # Todo Web Application using Spring Boot and MySQL as Database
 
-Run com.in28minutes.springboot.web.SpringBootFirstWebApplication as a Java Application.
+Run SpringBootFirstWebApplication as a Java Application.
 
 Runs on default port of Spring Boot - 8080
 
